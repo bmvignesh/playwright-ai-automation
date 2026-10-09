@@ -28,3 +28,19 @@ jobs:
 
       - name: Run Playwright tests
         run: npx playwright test
+
+      # Upload HTML report
+      - name: Upload Playwright HTML report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-report
+          path: playwright-report
+
+      # Upload screenshots, videos, traces
+      - name: Upload Playwright test results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-test-results
+          path: test-results
