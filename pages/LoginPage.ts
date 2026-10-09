@@ -12,11 +12,10 @@ export class LoginPage {
   }
 
   async login(username: string, password: string) {
-    // Wait until login button is visible before interacting
-    await this.loginButton.waitFor({ state: 'visible', timeout: 10000 });
+  await this.usernameField.fill(username);
+  await this.passwordField.fill(password);
+  await this.loginButton.waitFor({ state: 'visible', timeout: 10000 });
+  await this.loginButton.click();
+}
 
-    await this.usernameField.fill(username);
-    await this.passwordField.fill(password);
-    await this.loginButton.click();
-  }
 }

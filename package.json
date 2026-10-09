@@ -1,25 +1,28 @@
 {
-  "name": "playwright-ts-practice",
+  "name": "playwright-ai-automation",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sample Playwright automation framework with POM, fixtures, and CI/CD",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:login": "playwright test tests/login.spec.ts --headed",
+    "test:api": "playwright test tests/api.spec.ts"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bmvignesh/playwright-ts-practice.git"
+    "url": "git+https://github.com/bmvignesh/playwright-ai-automation.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["playwright", "typescript", "automation", "testing"],
+  "author": "Vignesh",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/bmvignesh/playwright-ts-practice/issues"
+    "url": "https://github.com/bmvignesh/playwright-ai-automation/issues"
   },
-  "homepage": "https://github.com/bmvignesh/playwright-ts-practice#readme",
+  "homepage": "https://github.com/bmvignesh/playwright-ai-automation#readme",
   "devDependencies": {
-    "@playwright/test": "^1.63.0",
+    "@playwright/test": "^1.64.0",
     "ts-node": "^10.9.2",
     "typescript": "^7.0.2"
   }
