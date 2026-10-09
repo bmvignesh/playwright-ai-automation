@@ -1,9 +1,9 @@
 ![Playwright](https://img.shields.io/badge/tested%20with-Playwright-blue)
 ![CI](https://github.com/bmvignesh/playwright-ai-automation/actions/workflows/playwright.yml/badge.svg)
+
 # Playwright AI Automation
 
-This repository contains a sample automation framework built with [Playwright](https://playwright.dev/).  
-It demonstrates modern test automation practices including Page Object Model (POM), fixtures, utilities, and CI/CD integration.
+A modern Playwright + TypeScript automation framework showcasing API and UI testing, Page Object Model (POM), fixtures and CI/CD integration.
 
 ---
 
@@ -18,7 +18,6 @@ playwright-ai-automation/
 │-- package.json        # Dependencies & npm scripts
 │-- README.md           # Documentation
 
-
 ---
 
 ## ⚙️ Setup
@@ -31,13 +30,32 @@ playwright-ai-automation/
 2. Install dependencies:
    npm install
 
-3. Running Tests:
+3. Install Playwright browsers:
+   npx playwright install --with-deps
+
+4. Running Tests:
    Run all tests:
-      npx playwright test
+      npm test
    Run tests in headed mode:
-      npx playwright test --headed
+      npm run test:headed
    Run a specific test file:
-      npx playwright test tests/example.spec.ts
+      npm run test:login
+
+---
+
+## 📊 Reports
+After running tests, open the interactive HTML report:
+   npx playwright show-report
+
+Reports include screenshots and videos for failed tests.
+
+---
+
+## 🧪 Example Tests
+API Test → Validates JSON response from a public API (api.spec.ts)
+
+Login Test → Automates login flow on Herokuapp using Page Object Model (login.spec.ts)
+
 ---
 
 ## 🛠️ Features
